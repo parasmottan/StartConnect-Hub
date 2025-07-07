@@ -29,7 +29,8 @@ const ChatAssistant = () => {
         <Chatbot
           config={config}
           messageParser={MessageParser}
-          actionProvider={ActionProvider}
+        actionProvider={ActionProvider}
+        validator={(input) => input.trim().length > 0}
         />
       }
     </div>
